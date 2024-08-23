@@ -5,7 +5,7 @@ function generateRandomNumber() {
     const digits = [];
     while (digits.length < 6) {
         const digit = Math.floor(Math.random() * 10);
-        if (!digits.includes(digit)) {
+        if (!digits.includes(digit) && (digits.length > 0 || digit !== 0)) {
             digits.push(digit);
         }
     }
