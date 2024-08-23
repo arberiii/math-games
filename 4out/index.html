@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Out Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>4 Out Game</h1>
+        <p>Start with a random 6-digit number and try to make it zero in exactly 4 operations. You can subtract, multiply, divide, or add a 2-digit number. Decimals are allowed. Can you solve it?</p>
+        <div class="game">
+            <div class="display">
+                <input type="text" readonly id="game-display" value="000000">
+            </div>
+            <div class="input-section">
+                <input type="number" id="input-number" placeholder="Enter 2 digits" maxlength="2" min="10" max="99">
+                <select id="operation">
+                    <option value="subtract">-</option>
+                    <option value="add">+</option>
+                    <option value="multiply">*</option>
+                    <option value="divide">/</option>
+                </select>
+                <button class="btn" onclick="performOperation()">Apply</button>
+            </div>
+            <div class="status">
+                <p id="status-message">You have 4 moves left.</p>
+            </div>
+            <button class="btn reset-btn" onclick="resetGame()">Restart Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
