@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1001 Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>1001 Game</h1>
+        <p>Reach exactly 1001 in the fewest turns possible by rolling the dice and choosing your operations!</p>
+
+        <div id="display-area">
+            <p>Current Value: <span id="current-value">0</span></p>
+            <p>Turns Taken: <span id="turns">0</span></p>
+        </div>
+
+        <div id="dice-area">
+            <div id="dice1" class="dice"></div>
+            <div id="dice2" class="dice"></div>
+        </div>
+
+        <button class="btn" id="roll-btn" onclick="rollDice()">Roll Dice</button>
+
+        <div id="action-buttons">
+            <button class="btn" id="dice1-btn" onclick="selectDice(1)" style="display: none; margin-right: 12px">Dice 1 as Operation</button>
+            <button class="btn" id="dice2-btn" onclick="selectDice(2)" style="display: none;">Dice 2 as Operation</button>
+        </div>
+
+        <div id="result-area">
+            <p id="operation-result">Roll the dice to start!</p>
+        </div>
+
+        <div id="operation-info">
+            <h3>Operation Values:</h3>
+            <ul>
+                <li><strong>1</strong> = + (Addition)</li>
+                <li><strong>2</strong> = - (Subtraction)</li>
+                <li><strong>3</strong> = x (Multiplication)</li>
+                <li><strong>4</strong> = x (Multiplication)</li>
+                <li><strong>5</strong> = / (Division)</li>
+                <li><strong>6</strong> = + (Addition)</li>
+            </ul>
+        </div>
+
+        <button class="btn reset-btn" onclick="resetGame()">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
